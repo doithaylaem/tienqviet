@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- bootstrap thần thánh -->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- end bt -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bộ Chuyển Đổi Tiếng Việt</title>
+    <style type="text/css" media="screen">
+    body {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    #inputtext {
+        margin-top: 50px;
+        display: block;
+        resize: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #restext {
+        background-color: #dddddd;
+        min-height: 150px;
+        margin: 10px 0;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+    </style>
+</head>
+<h1 style="text-align: center; color: red;font-family: sans-serif;font-weight: bold;">CUYỂN DỔI TIẾQ VIỆT</h1>
+<textarea class="form-control" name="input" id="inputtext" cols="50" rows="10" autofocus="" placeholder="nhập vào đoạn văn bạn muốn chuyển đổi">
+Phận sao phận bạc như vôi
+Đã đành nước chảy hoa trôi lỡ làng
+Ôi Kim Lang! Hỡi Kim Lang!
+Thôi thôi thiếp đã phụ chàng từ đây!
+</textarea>
+<p>Kết Quả</p>
+<pre id="restext" class="form-control">
+Phận sao fận bạk n'ư vôi
+Dã dàn' nướk cảy hoa kôi lỡ làq
+Ôi Kim Laq! Hỡi Kim Laq!
+Thôi wôi wiếp dã fụ càq từ dây!
+</pre>
+<p>Công cụ sử dụng <a href="/">&copy; Tienqviet.js</a> &nbsp; Download tại : <a href="https://github.com/doithaylaem/tienqviet"> GitHub</a></p>
+<body>
+    <script type="text/javascript" src="tieqviet.min.js"></script>
+    <script type="text/javascript">
+    var input = document.getElementById('inputtext');
+    input.addEventListener('keyup', function() {
+        document.getElementById('restext').innerText = build(input.value);
+    });
+    </script>
+</body>
+
+</html>
